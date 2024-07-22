@@ -1,5 +1,5 @@
 import numpy as np
-from sklearn.metrics.classification import accuracy_score, recall_score, f1_score
+from sklearn.metrics import accuracy_score, recall_score, f1_score
 import scipy.stats as st
 import sys
 import os
@@ -7,7 +7,7 @@ import os
 import random
 import numpy as np
 import tensorflow as tf
-tf.set_random_seed(0)
+tf.random.set_seed(0)
 session_conf = tf.ConfigProto(intra_op_parallelism_threads=1, inter_op_parallelism_threads=1)
 
 from tensorflow.keras.callbacks import EarlyStopping, ModelCheckpoint
